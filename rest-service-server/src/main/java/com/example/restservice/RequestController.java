@@ -15,6 +15,11 @@ public class RequestController
 {
 	private final AtomicLong counter = new AtomicLong();
 	
+	/**
+	 * Handling GET request from /sendMessage endpoint
+	 * @param message
+	 * @return
+	 */
 	@GetMapping("/sendMessage")
 	public Map<String, String> sendMessage(@RequestParam(value="message", defaultValue = "") String message)
 	{	
